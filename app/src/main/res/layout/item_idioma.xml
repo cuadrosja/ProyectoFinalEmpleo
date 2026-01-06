@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/ly_info_idioma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/ly_acciones_idioma"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_nombre_idioma_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Idioma"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_nivel_idioma_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#EDE7F6"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="Nivel:"
+                android:textColor="#673AB7"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Dominio del idioma registrado"
+                android:textColor="#888888"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_acciones_idioma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_editar_idioma"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/fondo_boton_redondo"
+                android:src="@android:drawable/ic_menu_edit"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                android:defaultFocusHighlightEnabled="true"/>
+
+            <ImageButton
+                android:id="@+id/btn_eliminar_idioma"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/fondo_boton_redondo"
+                android:src="@android:drawable/ic_menu_delete"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                android:defaultFocusHighlightEnabled="true"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

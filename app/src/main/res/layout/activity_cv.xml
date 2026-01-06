@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".presentacion.cv.CvActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/id_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navegacion"
+        android:fillViewport="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:text="Mi Currículum"
+                android:textColor="#00CD00"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_subtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="-17dp"
+                android:layout_marginBottom="17dp"
+                android:text="Documento personal de presentación ✅ "
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/caja_presentacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="24dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:background="#FFF9C4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Presentación"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txt_presentacion_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="55dp"
+                        android:text="Cargando descripción profesional..."
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:scrollHorizontally="false"
+                        android:singleLine="false"
+                        android:maxLines="100"/>
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btn_actualizar_presentacion"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="12dp"
+                    app:tint="@color/verde"
+                    android:src="@drawable/icon_update"
+                    android:elevation="15dp"
+                    android:contentDescription="Actualizar"
+                    android:scaleType="centerInside"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+                    app:cornerSize="35dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_encabezado">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Experiencia Laboral"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <LinearLayout
+                        android:id="@+id/contenedor_experiencia_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:minHeight="10dp"/>
+                    <include
+                        android:id="@+id/btn_ver_lista_exp"
+                        layout="@layout/item_boton_lista"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/contenedor_experiencia_cv"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:elevation="10dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_encabezado">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Formación Académica"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <LinearLayout
+                        android:id="@+id/contenedor_estudios_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:minHeight="10dp" />
+                    <include
+                        android:id="@+id/btn_ver_lista_estudios"
+                        layout="@layout/item_boton_lista"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/contenedor_estudios_cv"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:elevation="10dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_encabezado">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dominio Lingüístico"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <LinearLayout
+                        android:id="@+id/contenedor_idiomas_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:minHeight="10dp" />
+                    <include
+                        android:id="@+id/btn_ver_lista_idiomas"
+                        layout="@layout/item_boton_lista"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/contenedor_idiomas_cv"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:elevation="10dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@drawable/fondo_encabezado">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Habilidad o Conocimiento"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/cg_habilidades_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp" />
+                    <include
+                        android:id="@+id/btn_ver_lista_habilidades"
+                        layout="@layout/item_boton_lista"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/cg_habilidades_cv"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:elevation="10dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/navegacion"
+        layout="@layout/item_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

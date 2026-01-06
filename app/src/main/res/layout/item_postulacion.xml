@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:id="@+id/Tarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/bg_tarjeta_postulacion"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_titulo_postulacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Puesto"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/txt_estado_postulacion"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_estado_postulacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PENDIENTE"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_empresa_postulacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la Empresa"
+            android:textColor="#555555"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/txt_fecha_postulacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postulado el: 24/12/2025"
+            android:textColor="#888888"
+            android:textSize="13sp"
+            android:gravity="right"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

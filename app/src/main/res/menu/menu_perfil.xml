@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_cv"
+        android:icon="@drawable/icon_cv"
+        android:title="Mi CV"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_postulaciones"
+        android:icon="@drawable/icon_postulacion"
+        android:title="Mis Postulaciones"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_favoritos"
+        android:icon="@drawable/icon_favorito"
+        android:title="Mis Favoritos"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_cerrar_sesion"
+        android:icon="@drawable/icon_cerrar"
+        android:title="Cerrar Sesión"
+        app:showAsAction="never"/>
+</menu>

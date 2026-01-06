@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    tools:context=".presentacion.habilidad.HabilidadActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navegacion">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/ver_encabezado_hab"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/fondo_encabezado" />
+
+            <TextView
+                android:id="@+id/txt_titulo_habilidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-100dp"
+                android:layout_marginStart="24dp"
+                android:text="Habilidad o Conocimiento"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/contenedor_habilidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="80dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Mis conocimientos técnicos"
+                    android:textColor="#555"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cg_habilidades"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacingVertical="8dp"
+                    app:singleLine="false">
+
+                    <include layout="@layout/item_habilidad" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_agregar_habilidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Agregar habilidad"
+        app:tint="@color/white"
+        app:backgroundTint="#28A745"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navegacion"/>
+
+    <include
+        android:id="@+id/navegacion"
+        layout="@layout/item_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

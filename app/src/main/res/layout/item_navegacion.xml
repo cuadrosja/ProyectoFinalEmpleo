@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:background="#E3E3E3"
+    android:elevation="8dp"
+    android:paddingTop="8dp">
+
+    <Button
+        android:id="@+id/btnNavInicio"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Inicio"
+        android:onClick="navegarMenu"
+        android:textSize="11sp"
+        android:textAllCaps="false"
+        android:textColor="@color/item_navegacion"
+        android:background="@drawable/fondo_menu_nav"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+        android:drawableTop="@drawable/icon_home" />
+
+    <Button
+        android:id="@+id/btnNavEmpleo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Empleos"
+        android:onClick="navegarMenu"
+        android:textSize="11sp"
+        android:textAllCaps="false"
+        android:textColor="@color/item_navegacion"
+        android:background="@drawable/fondo_menu_nav"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+        android:drawableTop="@drawable/icon_work" />
+    <Button
+        android:id="@+id/btnNavPerfil"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Ver Perfil"
+        android:onClick="navegarMenu"
+        android:textSize="11sp"
+        android:textAllCaps="false"
+        android:textColor="@color/item_navegacion"
+        android:background="@drawable/fondo_menu_nav"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+        android:drawableTop="@drawable/icon_perfil" />
+
+</LinearLayout>

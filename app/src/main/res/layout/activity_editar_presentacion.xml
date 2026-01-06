@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9EEF5">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/navegacion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carta de Presentación"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Cuéntale a las empresas por qué eres el candidato ideal."
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeColor="@color/black"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nueva_carta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="Ej: Soy un desarrollador apasionado con..."
+                    android:inputType="textMultiLine"
+                    android:minLines="8"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_guardar_carta"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#007BFF"
+                android:text="ACTUALIZAR"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="15dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/navegacion"
+        layout="@layout/item_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
