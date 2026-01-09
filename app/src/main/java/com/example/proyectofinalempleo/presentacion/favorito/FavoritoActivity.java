@@ -54,18 +54,21 @@ public class FavoritoActivity extends AppCompatActivity {
             Intent intent = new Intent(this, DetalleActivity.class);
             intent.putExtra("ID_FAVORITO", favorito.getIdFavorito());
             if (favorito.getEmpleo() != null) {
-                // USAMOS EL ID DEL EMPLEO, NO EL ID DEL FAVORITO
                 intent.putExtra("ID_EMPLEO", favorito.getEmpleo().getIdEmpleo());
-
                 intent.putExtra("TITULO", favorito.getEmpleo().getTituloEmpleo());
+                intent.putExtra("DESCRIPCION", favorito.getEmpleo().getDescripcion());
+                intent.putExtra("FECHA", favorito.getEmpleo().getFechaPublicacion());
+                intent.putExtra("MODALIDAD", favorito.getEmpleo().getModalidad());
 
                 if (favorito.getEmpleo().getEmpresa() != null) {
                     intent.putExtra("EMPRESA", favorito.getEmpleo().getEmpresa().getNombreEmpresa());
+                    intent.putExtra("DIRECCION", favorito.getEmpleo().getEmpresa().getDireccion());
+                    intent.putExtra("LOGO_URL", favorito.getEmpleo().getEmpresa().getLogoUrl());
                 }
-                intent.putExtra("DESCRIPCION", favorito.getEmpleo().getDescripcion());
+                if (favorito.getEmpleo().getCategoria() != null) {
+                    intent.putExtra("CATEGORIA", favorito.getEmpleo().getCategoria().getNombreCategoria());
+                }
             }
-            // ---------------------------
-
             intent.putExtra("ORIGEN", "MIS_FAVORITOS");
             startActivity(intent);
         });

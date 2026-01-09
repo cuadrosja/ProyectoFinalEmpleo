@@ -55,13 +55,21 @@ public class PostulacionActivity extends AppCompatActivity {
 
         adaptador = new ListaPostulacion(new ArrayList<>(), postulacion -> {
             Intent intent = new Intent(this, DetalleActivity.class);
-
             intent.putExtra("ID_POSTULACION", postulacion.getIdPostulacion());
             if (postulacion.getEmpleo() != null) {
                 intent.putExtra("ID_EMPLEO", postulacion.getEmpleo().getIdEmpleo());
                 intent.putExtra("TITULO", postulacion.getEmpleo().getTituloEmpleo());
-                intent.putExtra("EMPRESA", postulacion.getEmpleo().getEmpresa().getNombreEmpresa());
                 intent.putExtra("DESCRIPCION", postulacion.getEmpleo().getDescripcion());
+                intent.putExtra("FECHA", postulacion.getEmpleo().getFechaPublicacion());
+                intent.putExtra("MODALIDAD", postulacion.getEmpleo().getModalidad());
+                if (postulacion.getEmpleo().getEmpresa() != null) {
+                    intent.putExtra("EMPRESA", postulacion.getEmpleo().getEmpresa().getNombreEmpresa());
+                    intent.putExtra("DIRECCION", postulacion.getEmpleo().getEmpresa().getDireccion());
+                    intent.putExtra("LOGO_URL", postulacion.getEmpleo().getEmpresa().getLogoUrl());
+                }
+                if (postulacion.getEmpleo().getCategoria() != null) {
+                    intent.putExtra("CATEGORIA", postulacion.getEmpleo().getCategoria().getNombreCategoria());
+                }
             }
             intent.putExtra("ORIGEN", "MIS_POSTULACIONES");
             startActivity(intent);

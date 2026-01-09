@@ -36,7 +36,7 @@ public class EmpleoActivity extends AppCompatActivity {
     private List<Empleo> listaDePrueba;
     private EmpleoViewModel empleoViewModel;
 
-    // --- NUEVAS VARIABLES PARA PAGINACIÓN ---
+    //PAGINACIÓN ---
     private int paginaActual = 1;
     private final int limitePorPagina = 10;
     private TextView txtPaginaActual;
@@ -79,8 +79,8 @@ public class EmpleoActivity extends AppCompatActivity {
             intent.putExtra("TITULO", empleo.getTituloEmpleo());
             intent.putExtra("EMPRESA", empleo.getEmpresa().getNombreEmpresa());
             intent.putExtra("DESCRIPCION", empleo.getDescripcion());
+            intent.putExtra("LOGO_URL", empleo.getEmpresa().getLogoUrl());
 
-            // 2. AGREGAR ESTOS (Los nuevos de tu BD):
             intent.putExtra("MODALIDAD", empleo.getModalidad());
             intent.putExtra("DIRECCION", empleo.getEmpresa().getDireccion());
             intent.putExtra("CATEGORIA", empleo.getCategoria().getNombreCategoria());

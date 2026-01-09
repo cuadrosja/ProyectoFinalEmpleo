@@ -118,13 +118,8 @@ public class DetalleActivity extends AppCompatActivity {
                             "<font color='" + colorNegro + "'><b>📂 Categoría:</b> " + categoria + "</font><br>" +
                             "<font color='" + colorNegro + "'><b>💻 Modalidad:</b> " + modalidad + "</font><br>" +
                             "<hr>" +
-                            // Título de descripción
                             "<b>Descripción del Puesto:</b><br>" + descripcion + "<br><br>" +
-                            // La descripción SIN etiqueta de color (tomará el azul por defecto)
-                            descripcion + "<br><br>" +
-                            // Fecha en Negro y Negrita
                             "<font color='" + colorNegro + "'><b>📅 Publicado el: </b><b>" + (fecha.length() > 10 ? fecha.substring(0, 10) : fecha) + "</b></font>";
-            // Aplicamos el formato HTML al TextView
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                 tvDetalle.setText(android.text.Html.fromHtml(contenidoHtml, android.text.Html.FROM_HTML_MODE_LEGACY));
             } else {

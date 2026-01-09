@@ -14,4 +14,5 @@ public class Empresa {
     private String descripcion;
     private String telefono;
     private String direccion;
+    private String logoUrl;
 }
